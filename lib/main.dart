@@ -116,10 +116,16 @@ class _HomeState extends State<Home> {
       key: Key(DateTime.now().millisecondsSinceEpoch.toString()),
       background: Container(
         color: Colors.red,
-        child: Align(
-          alignment: Alignment(-0.9, 0.0),
-          child: Icon(Icons.delete, color: Colors.white, ),
-        ),
+        child: Row(
+          children: [
+            Align(
+              alignment: Alignment(-0.8, 0.0),
+              child: Icon(Icons.delete, color: Colors.white, ),
+            ),
+            Text(" Deletar",style: TextStyle(color: Colors.white, fontSize: 20.0),
+            ),
+          ],
+        )
       ),
       direction: DismissDirection.startToEnd,
       child: CheckboxListTile(
